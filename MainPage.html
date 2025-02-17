@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="js/script.js"></script>
+
+    <title>iRent 共享租車</title>
+    <!-- 請參閱 Bootstrap 10-1, 10-2, 10-3 -->
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="iRent-new-LOGO.svg" alt="" class="logo" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 展示 Header 裡面的頁籤 -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- 頁籤 (左側) -->
+          <ul class="navbar-nav me-auto mb-lg-0 w-100">
+            
+            <!-- navbar-class-1 -->
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#">優惠活動</a> -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle px-4"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  優惠活動
+                </a>
+                <ul class="dropdown-menu text-center">
+                  <li><a class="dropdown-item" href="#">信用卡優惠</a></li>
+                  <li><a class="dropdown-item" href="#">當月壽星</a></li>
+                  <li><a class="dropdown-item" href="#">商務優惠</a></li>
+                  <li><a class="dropdown-item" href="#">限時優惠</a></li>
+                </ul>
+              </li>
+              <!-- 展示當前頁面用 aria-current -->
+              <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+            </li>
+
+            <!-- navbar-class-2 -->
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#">租車說明</a> -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle px-4"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  租車說明
+                </a>
+                <ul class="dropdown-menu text-center">
+                  <li><a class="dropdown-item" href="#">每日租貸</a></li>
+                  <li><a class="dropdown-item" href="#">訂閱式租貸</a></li>
+                  <li><a class="dropdown-item" href="#">租車費率說明</a></li>
+                  <li><a class="dropdown-item" href="#">租車操作指南</a></li>
+                </ul>
+              </li>
+            </li>
+
+            <!-- navbar-class-3 -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle px-4"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                訂閱式租車
+              </a>
+              <ul class="dropdown-menu text-center">
+                <li><a class="dropdown-item" href="#">經濟型 (Toyota)</a></li>
+                  <li><a class="dropdown-item" href="#">豪華型 (Lexus)</a></li>
+                  <li><a class="dropdown-item" href="#">純電車 (Electric)</a></li>
+                  <li><a class="dropdown-item" href="#">iRent 電動機車</a></li>
+              </ul>
+            </li>
+          
+            <!-- navbar-class-4 -->
+            <li class="nav-item px-4">
+              <a class="nav-link" href="#">
+                服務據點
+              </a>
+            </li>
+
+            <!-- navbar-class-5 -->
+            <li class="nav-item px-4">
+              <a class="nav-link" href="#">常見問題</a>
+            </li>
+          </ul>
+
+          <!-- User-Login & Language 頁籤 (右側) -->
+          <ul class="navbar-nav ms-auto mb-lg-0 w-10">
+            <!-- navbar-class-3 -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle w-100"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+              <img src="icon_Langu.svg" alt="">
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Chinese(繁體中文)</a></li>
+                  <li><a class="dropdown-item" href="#">Chinese(簡體中文)</a></li>
+                  <li><a class="dropdown-item" href="#">English</a></li>
+                  <li><a class="dropdown-item" href="#">Korean</a></li>
+                  <li><a class="dropdown-item" href="#">Japanese</a></li>
+              </ul>
+            </li>
+            <li class="nav-item ">
+               <!-- User icon -->
+                <a class="nav-link text-danger fs-3" href="#"><i class="bi bi-person-fill"></i></a>
+            </li>
+      </div>
+    </nav>
+
+    <!-- Section (Carousel) -->
+    <div class="carousel-section">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="pic01.jpg" class="d-block w-100 carousel-img" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="pic02.jpg" class="d-block w-100 carousel-img" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="pic03.jpg" class="d-block w-100 carousel-img" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="pic04.jpg" class="d-block w-100 carousel-img" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev carousel-prev-bg" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next carousel-next-bg" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section (Rent car Introduction) -->
+    <div class="container">
+      <h1> 駕馭無限選擇 </h1>
+      <h3 class="RentCarline"></h3>
+      <div class="wrapper">
+        <ul class="tab-introduce">
+          <li id="rent-car"><img src="pics/pic-rent-car-idle.svg" alt=""></li>
+          <li id="sub-car"><img src="pics/pic-sub-car-idle.svg" alt=""></li>
+          <li id="used-car"><img src="pics/pic-used-car-idle.svg" alt=""></li>
+        </ul>
+        <div class="wrapper-box">
+          <h1 id="Text-title">Title</h1>
+          <p id="Text-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, ipsum consectetur quod qui velit corrupti temporibus iure ea dignissimos consequuntur.</p>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Section (News) -->
+    <!-- 標題區域 -->
+  <div class="row mb-4">
+    <div class="col-md-9">
+      <h1>最新消息</h1>
+      <h3 class="Newsline"></h3>
+    </div>
+    <div class="col-md-3 text-end">
+      <button class="btn btn-outline-secondary rounded-pill me-2">短租</button>
+      <button class="btn btn-outline-secondary rounded-pill">訂閱</button>
+    </div>
+  </div>
+
+  <!-- 列表區域 -->
+  <div class="news-list">
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+                <span class="fw-bold">▶ 2025/01/08 【公告】</span> 訊息測試中，請勿當真此資訊，若點擊會跳出恭喜您發財，事事都精彩...
+            </div>
+            <button class="btn btn-outline-danger btn-more">+ MORE</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+                <span class="fw-bold">▶ 2025/01/08 【公告】</span> 訊息測試中，請勿當真此資訊，若點擊會跳出恭喜您發財，事事都精彩...
+            </div>
+            <button class="btn btn-outline-danger btn-more">+ MORE</button>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+                <span class="fw-bold">▶ 2025/01/08 【公告】</span> 訊息測試中，請勿當真此資訊，若點擊會跳出恭喜您發財，事事都精彩...
+            </div>
+            <button class="btn btn-outline-danger btn-more">+ MORE</button>
+        </li>
+    </ul>
+  </div>
+
+  <!-- Section (Discount) -->
+  <!-- 標題區域 -->
+  <div class="container">
+    <h1> 優惠報你知 </h1>
+    <h3 class="RentCarline"></h3>   
+
+    <!-- 卡片式輪播圖 (優惠推薦) -->
+    <div class="promo-carousel-section">
+      <div id="promoCarouselControls" class="carousel slide" data-bs-ride="carousel">
+        <!-- 輪播圖 (順序小圈) -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#promoCarouselControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#promoCarouselControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#promoCarouselControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#promoCarouselControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="pic01.jpg" class="d-block w-100 carousel-img fade-Img" alt="image1" id="carouselImage1">
+            <!-- <button class="image-btn" onclick="changeImage(0)">更換圖片</button> -->
+            <!-- <button class="more-btn" id="moreButton">詳情更多</button> -->
+            <!-- 加入 優惠 1 - info -->
+            <div class="discount-info-box mt-3 d-flex justify-content-between align-items-center">
+              <div class="info-wrapper">
+                <h5 id="announcementDate1">2025/02/14</h5>
+                <p id="announcementText1">【iRent天下有情人終成眷屬】 <br>A : 欸你喜歡什麼類型的啊 ? B : 我愛Rent啊! 現在只要在 iRent 官方FB粉專曬出甜蜜蜜合照, 有機會抽中韓國釜山14天雙人遊自助旅行...</p>
+              </div>
+              <!-- <button class="more-btn" id="moreButton">+ MORE</button> -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="pic02.jpg" class="d-block w-100 carousel-img fade-Img" alt="image2" id="carouselImage2">
+            <!-- <button class="image-btn" onclick="changeImage(1)">更換圖片</button> -->
+            <!-- <button class="more-btn" id="moreButton">詳情更多</button> -->
+            <!-- 加入 優惠 2 - info -->
+            <div class="discount-info-box mt-3 d-flex justify-content-between align-items-center">
+              <div class="info-wrapper">
+                <h5 id="announcementDate2">2025/05/11</h5>
+                <p id="announcementText2">【溫馨i提醒】<br>母親節要到了, 想去哪裡走走? 凡於母親節當週租車, 即享85折優惠, 來門市再送康乃馨一束, 讓媽媽「馨」情大好!...</p>
+              </div>
+              <!-- <button class="more-btn" id="moreButton">+ MORE</button> -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="pic03.jpg" class="d-block w-100 carousel-img fade-Img" alt="image3" id="carouselImage3">
+            <!-- <button class="image-btn" onclick="changeImage(2)">更換圖片</button> -->
+            <!-- <button class="more-btn" id="moreButton">詳情更多</button> -->
+            <!-- 加入 優惠 3 - info -->
+            <div class="discount-info-box mt-3 d-flex justify-content-between align-items-center">
+              <div class="info-wrapper">
+                <h5 id="announcementDate3">2025/03/20</h5>
+                <p id="announcementText3">【月圓人團圓 iRent 讓家近在眼前】 <br>今年中秋節要怎麼過? 當然是和家人一起賞月、吃月餅，還有…開 iRent! 中秋佳節，租 iRent, 享「圓」滿優惠, 還有機會參加...</p>
+              </div>
+              <!-- <button class="more-btn" id="moreButton">+ MORE</button> -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="pic04.jpg" class="d-block w-100 carousel-img fade-Img" alt="image4" id="carouselImage4">
+            <!-- <button class="image-btn" onclick="changeImage()">更換圖片</button> -->
+            <!-- <button class="more-btn" id="moreButton">詳情更多</button> -->
+            <!-- 加入 優惠 4 - info -->
+            <div class="discount-info-box mt-3 d-flex justify-content-between align-items-center">
+              <div class="info-wrapper">
+                <h5 id="announcementDate4">2025/12/25</h5>
+                <p id="announcementText4">【Merry Christmas】 <br>聖誕節, 與家人一起「租」出溫暖旅程!🎄在官方FB粉專上傳留言分享聖誕願望, 有機會贏取租車優惠! 讓 iRent 陪你一起「租」... </p>
+              </div>
+              <!-- <button class="more-btn" id="moreButton">+ MORE</button> -->
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev carousel-prev-bg" type="button" data-bs-target="#promoCarouselControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span> 
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next carousel-next-bg" type="button" data-bs-target="#promoCarouselControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div> 
+    <!-- 卡片式輪播圖 (優惠推薦) - 公告區
+    <div class="discount-wrapper-box mt-3 d-flex justify-content-between align-items-center">
+      <div>
+          <h3 id="announcementDate">2025/01/08</h3>
+          <h1 id="announcementText">【公告】 恭喜您發財，事事都精彩</h1>
+      </div>
+      <button class="more-btn" id="moreButton">+ MORE</button>
+    </div> -->
+  </div>
+
+  <!-- Footer (List & infomation) -->
+  <div class="footer-wrapper">
+    <ul class="quick-menu">
+      <li class="menu-column">
+        <div class="menu-header">
+          <div class="menu-title">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/307a12673836170db115b22a428b1378790b6003c4f455c977b7aa5bfe1b8596?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+              class="menu-icon"
+              alt=""
+            />
+            <h5>公司介紹</h5>
+          </div>
+        </div>
+        <ul>
+          <li class="menu-item">關於 iRent</li>
+          <li class="menu-item">認識和運</li>
+          <li class="menu-item">服務據點</li>
+          <li class="menu-item">最新消息</li>
+        </ul>
+      </li>
+      <li class="menu-column">
+        <div class="menu-header">
+          <div class="menu-title">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/dbf0339f680a262a41787fea0c2889e0a2fa5fa5f6c7c642cf09cf6602027404?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+              class="menu-icon"
+              alt=""
+            />
+            <h5>服務項目</h5>
+          </div>
+        </div>
+        <ul>
+          <li class="menu-item">路邊租還</li>
+          <li class="menu-item">同站租還</li>
+          <li class="menu-item">門市租車</li>
+          <li class="menu-item">專車接送</li>
+        </ul>
+      </li>
+      <li class="menu-column">
+        <div class="menu-header">
+          <div class="menu-title">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ce3c414f34fbac1411959d69e677945de655fccc4cd4c5cf440558b918991d4?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+              class="menu-icon"
+              alt=""
+            />
+            <h5>優惠情報</h5>
+          </div>
+        </div>
+        <ul>
+          <li class="menu-item">短租優惠</li>
+          <li class="menu-item">長租優惠</li>
+          <li class="menu-item">最新消息</li>
+        </ul>
+      </li>
+      <li class="menu-column">
+        <div class="menu-header">
+          <div class="menu-title">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/52ee2d5ceda851d6a03de84e10519e6b1520b7d7883f8021eff11d99e3e7a518?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+              class="menu-icon"
+              alt=""
+            />
+            <h5>服務據點</h5>
+          </div>
+        </div>
+        <ul>
+          <li class="menu-item">訂閱長租據點</li>
+          <li class="menu-item">iRent 短租據點</li>
+          <li class="menu-item">門市據點</li>
+        </ul>
+      </li>
+      <li class="menu-column">
+        <div class="menu-header">
+          <div class="menu-title">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d30ec93249a88a17fd854b5ea8b324132a451d938a2ef12e731182a3a064e8dc?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+              class="menu-icon"
+              alt=""
+            />
+            <h5>聯絡我們</h5>
+          </div>
+        </div>
+        <ul>
+          <li class="menu-item">網站使用條款</li>
+          <li class="menu-item">隱私政策</li>
+          <li class="menu-item">聯絡我們</li>
+          <li class="menu-item">常見問題</li>
+        </ul>
+      </li>
+      <li class="menu-column">
+        <div class="menu-header">
+          <div class="menu-title">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ce3c414f34fbac1411959d69e677945de655fccc4cd4c5cf440558b918991d4?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+              class="menu-icon"
+              alt=""
+            />
+            <h5>關係企業</h5>
+          </div>
+        </div>
+        <ul>
+          <li class="menu-item">和泰汽車</li>
+          <li class="menu-item">和雲行動服務</li>
+          <li class="menu-item">和潤企業</li>
+          <li class="menu-item">和運勁拍</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="footer-info">
+      <div class="company-info">
+        <div class="logo-section">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/3133e4a90e2825d9c398892ad0153eca935e160ff4e56a85afde50cd1e82e63c?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+            class="company-logo"
+            alt="Company Logo"
+          />
+          <div class="app-icons">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/70f6bf1ce61892324ce5c1a63e9483330e704f6f295985d3941f725505534d99?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+              class="app-store-icon"
+              alt="Download on App Store"
+            />
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d74f19d25e0ee98a2b26e79d8b25748a0bc1bfff24ff41474ee68873eb7436fa?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+              class="google-play-icon"
+              alt="Get it on Google Play"
+            />
+          </div>
+        </div>
+        <div class="company-details">
+          <div class="company-name">
+            和雲行動服務股份有限公司（統一編號：50885758）e-mail：hims@hotaimotor.com.tw
+          </div>
+          <div class="contact-info">
+            <div class="social-icons">
+              <div class="icon-wrapper">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/a59e03886aa18bf5e3cf52b0de18d99a2b57ec50ada7e1dfaf0dfeb615110704?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+                  class="social-icon"
+                  alt="Social Media Icon 1"
+                />
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/bc753bdf08ef7aeb7887099e94e44b3c44130ce7d9865a0b6d557105d8fba870?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+                  class="social-icon"
+                  alt="Social Media Icon 2"
+                />
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a7e721e16d08474093126996e0f752ed9e2bd11303f95e7ea2eee4298729572?placeholderIfAbsent=true&apiKey=b148ea72c10f4f0488cce63a3115743f"
+                  class="social-icon"
+                  alt="Social Media Icon 3"
+                />
+              </div>
+            </div>
+            <div class="service-line">
+              <div>服務專線</div>
+              <div>(02)5589-0808</div>
+            </div>
+          </div>
+          <div class="address">
+            總公司地址：台北市中山區長安東路二段99號5樓　電話：(02)2504-6290　傳真：(02)2508-0625
+          </div>
+          <div class="address">
+            台中分公司（統一編號：50898901）　台南分公司（統一編號：50898894）
+          </div>
+        </div>
+      </div>
+      <div class="copyright-section">
+        <div class="copyright-text">
+          Copyright © 和雲行動服務股份有限公司 ALL RIGHTS RESERVED
+        </div>
+        <div class="designer-credit">
+          <span style="color: #acacac">Design by</span>
+          <span
+            style="
+              font-weight: 510;
+              font-size: 20px;
+              line-height: 26px;
+              color: #acacac;
+            "
+          >
+            Jeremy Liu
+          </span>
+          <span style="color: #acacac">劉永鈞</span>
+        </div>
+        <div class="privacy-links">
+          <div>隱私權聲明</div>
+          <div>|</div>
+          <div>網站地圖</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
